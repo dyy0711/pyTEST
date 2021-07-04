@@ -157,7 +157,7 @@ def modify():
             if d['id']==student_id:
                 print('找到学生信息')
                 try:
-                    d['name']=int(input('请输入学生姓名'))
+                    d['name']=input('请输入学生姓名')
                     d['english']=int(input('请输入英语成绩'))
                     d['python']=int(input('请输入python成绩'))
                     d['java']=int(input('请输入java成绩'))
@@ -225,6 +225,7 @@ def total():
         print('暂未保存数据信息')
 
 def show():
+    # pass
     if os.path.exists(filename):
         with open(filename,'r',encoding='utf-8') as rfile:
             student_list=rfile.readlines()

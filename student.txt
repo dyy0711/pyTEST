@@ -1,5 +1,3 @@
-
-{'id': '1001', 'name': 'dyy', 'english': 45, 'python': 67, 'java': 84}
-{'id': '1002', 'name': 'zmm', 'english': 73, 'python': 87, 'java': 47}
-{'id': '1003', 'name': 'dyyzmm', 'english': 65, 'python': 38, 'java': 90}
-{'id': '1004', 'name': 'zmmdyy', 'english': 71, 'python': 36, 'java': 94}
+{'id': '1001', 'name': 'dyy', 'english': 2, 'python': 2, 'java': 2}
+{'id': '1003', 'name': 'zmm', 'english': 100, 'python': 1, 'java': 1}
+{'id': '1004', 'name': 'dz', 'english': 50, 'python': 50, 'java': 50}
