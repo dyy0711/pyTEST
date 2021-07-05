@@ -196,17 +196,21 @@ def sort():
            sort()
         mode=input('请选择排序方式：1按英语成绩排序  2.按python成绩排序  3.按java成绩排序  0.按总成绩排序\n')
         if mode=='1':
-           student_new.sort(key=lambda student_new: (student_new['english']),reverse=bool)
+           student_new.sort(key=lambda x:int(x['english']),reverse=bool)
+           #save(student_new)
         elif mode=='2':
-           pass
+           student_new.sort(key=lambda x:int(x['python']),reverse=bool)
+           #save(student_new)
         elif mode=='3':
-           pass
+           student_new.sort(key=lambda x:int(x['java']),reverse=bool)
+           #save(student_new)
         elif mode=='0':
-           pass
+           student_new.sort(key=lambda x:int(x['english'])+int(x['python'])+int(x['java']),reverse=bool)
+           #save(student_new)
         else:
            print('您输入的信息有误，请重新输入')
            sort()
-        show()
+        show(student_new)
     else:
         print('暂未保存学生信息')
         return
@@ -238,6 +242,7 @@ def show():
                 print(format_title.format('ID','姓名','英语成绩','python成绩','java成绩','总成绩'))
                 format_date='{:^6}\t{:^12}\t{:^8}\t{:^10}\t{:^8}'
             for item in student_list:
+                d=dict(eval(item))
                 print(format_date.format(d.get('id'),d.get('name'),d.get('english'),d.get('python'),d.get('java'),int(d.get('english'))+int(d.get('python'))+int(d.get('java'))))
     else:
         print('暂未保存学生数据信息')
