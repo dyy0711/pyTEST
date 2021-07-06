@@ -1,2 +1,4 @@
-{'id': '1001', 'name': 'dyy', 'english': 30, 'python': 90, 'java': 90}
-{'id': '1002', 'name': 'zmm', 'english': 60, 'python': 0, 'java': 0}
+{'id': '1001', 'name': 'zmm', 'english': 60, 'python': 89, 'java': 70}
+{'id': '1002', 'name': 'dyy', 'english': 90, 'python': 50, 'java': 30}
+{'id': '1003', 'name': 'dz', 'english': 40, 'python': 0, 'java': 0}
+{'id': '1004', 'name': 'zd', 'english': 39, 'python': 80, 'java': 69}
