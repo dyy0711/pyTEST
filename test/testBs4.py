@@ -7,7 +7,10 @@ BeautifulSoup4将复杂HTML文档转换成一个复杂的树形结构，每个�
 '''
 
 from bs4 import BeautifulSoup
-file=open('baidu.html','rb')
+file=open('bd3.html','rb') 
 html=file.read()
+file.close()
+print(html)
 bs=BeautifulSoup(html,'html.parser')
+print(bs)
 print(bs.title)
