@@ -17,7 +17,7 @@ def main():
     #2.逐一解析数据
     #3.保存数据
     savepath='.\\豆瓣电影Top250.xls'
-    # saveDate(savepath)
+    saveDate(datalist,savepath)
     askURL('https://movie.douban.com/top250?start=0')
 
 
@@ -75,7 +75,7 @@ def getData(baseurl):
             data.append(rating)                         #添加评分
             judgeNum=re.findall(findJudge,item)[0]
             data.append(judgeNum)                       #添加评价人数
-            inq=re.findall(findInq,item)[0]
+            inq=re.findall(findInq,item)
             if len(inq)!=0:
                 inq=inq[0].replace('。','')     #去掉句号
                 data.append(inq)                        #添加概述
@@ -118,8 +118,18 @@ def askURL(url):
 
 
 #3.保存数据
-def saveDate(savepath):
-    pass
+def saveDate(datalist,savepath):
+  book=xlwt.Workbook(encoding='utf-8')     #创建workbook对象
+  sheet=book.add_sheet('豆瓣电影Top250')    #创建工作表
+  col=('电影详情连接','图片链接','影片中文名','影片外国名','评分','评价数','概况','相关信息')
+  for i in range(0,8):
+      sheet.write(0,i,col[i])
+  for i in range(0,250):
+      print('第%d条'%i)
+      data=datalist[i]
+      for j in range(0,8):
+          sheet.write(i+1,j,datalist[i])
+  book.save('student.xls')
 
 
 if __name__=='__main__':
